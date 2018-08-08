@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="citysim_tc" type="citysim_simple_demo.sh" name="citysim_demo_launcher"/>
+
+</launch>
