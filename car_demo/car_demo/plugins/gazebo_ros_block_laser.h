@@ -35,7 +35,7 @@
 #include <gazebo/common/Time.hh>
 #include <gazebo/common/Plugin.hh>
 #include <gazebo/sensors/SensorTypes.hh>
-#include <gazebo/plugins/RayPlugin.hh>
+#include <gazebo/plugins/GpuRayPlugin.hh>
 
 #include <boost/bind.hpp>
 #include <boost/thread.hpp>
@@ -46,7 +46,7 @@
 namespace gazebo
 {
 
-  class GazeboRosBlockLaser : public RayPlugin
+  class GazeboRosBlockLaser : public GpuRayPlugin
   {
     /// \brief Constructor
     /// \param parent The parent entity, must be a Model or a Sensor
@@ -76,7 +76,7 @@ namespace gazebo
     private: physics::WorldPtr world_;
     /// \brief The parent sensor
     private: sensors::SensorPtr parent_sensor_;
-    private: sensors::RaySensorPtr parent_ray_sensor_;
+    private: sensors::GpuRaySensorPtr parent_ray_sensor_;
 
     /// \brief pointer to ros node
     private: ros::NodeHandle* rosnode_;

@@ -23,8 +23,9 @@
 #include <algorithm>
 #include <assert.h>
 
-#include <gazebo_plugins/gazebo_ros_block_laser.h>
+//#include <gazebo_plugins/gazebo_ros_block_laser.h>
 #include <gazebo_plugins/gazebo_ros_utils.h>
+#include "gazebo_ros_block_laser.h"
 
 #include <gazebo/physics/World.hh>
 #include <gazebo/physics/HingeJoint.hh>
@@ -32,7 +33,7 @@
 #include <sdf/sdf.hh>
 #include <sdf/Param.hh>
 #include <gazebo/common/Exception.hh>
-#include <gazebo/sensors/RaySensor.hh>
+#include <gazebo/sensors/GpuRaySensor.hh>
 #include <gazebo/sensors/SensorTypes.hh>
 #include <gazebo/transport/Node.hh>
 
@@ -73,7 +74,7 @@ GazeboRosBlockLaser::~GazeboRosBlockLaser()
 void GazeboRosBlockLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
 {
   // load plugin
-  RayPlugin::Load(_parent, _sdf);
+  GpuRayPlugin::Load(_parent, _sdf);
 
   // Get then name of the parent sensor
   this->parent_sensor_ = _parent;
@@ -88,7 +89,7 @@ void GazeboRosBlockLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
   this->node_->Init(worldName);
 
   GAZEBO_SENSORS_USING_DYNAMIC_POINTER_CAST;
-  this->parent_ray_sensor_ = dynamic_pointer_cast<sensors::RaySensor>(this->parent_sensor_);
+  this->parent_ray_sensor_ = dynamic_pointer_cast<sensors::GpuRaySensor>(this->parent_sensor_);
 
   if (!this->parent_ray_sensor_)
     gzthrow("GazeboRosBlockLaser controller requires a Ray Sensor as its parent");
@@ -304,22 +305,28 @@ void GazeboRosBlockLaser::PutLaserData(common::Time &_updateTime)
       j3 = hja + vjb * rayCount;
       j4 = hjb + vjb * rayCount;
       // range readings of 4 corners
-      r1 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j1) , maxRange-minRange);
-      r2 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j2) , maxRange-minRange);
-      r3 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j3) , maxRange-minRange);
-      r4 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j4) , maxRange-minRange);
-
+      //r1 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j1) , maxRange-minRange);
+      //r2 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j2) , maxRange-minRange);
+      //r3 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j3) , maxRange-minRange);
+      //r4 = std::min(this->parent_ray_sensor_->LaserShape()->GetRange(j4) , maxRange-minRange);
+      r1 = std::min(this->parent_ray_sensor_->Range(j1) , maxRange-minRange);
+      r2 = std::min(this->parent_ray_sensor_->Range(j2) , maxRange-minRange);
+      r3 = std::min(this->parent_ray_sensor_->Range(j3) , maxRange-minRange);
+      r4 = std::min(this->parent_ray_sensor_->Range(j4) , maxRange-minRange);
       // Range is linear interpolation if values are close,
       // and min if they are very different
       r = (1-vb)*((1 - hb) * r1 + hb * r2)
          +   vb *((1 - hb) * r3 + hb * r4);
 
       // Intensity is averaged
-      intensity = 0.25*(this->parent_ray_sensor_->LaserShape()->GetRetro(j1) +
-                        this->parent_ray_sensor_->LaserShape()->GetRetro(j2) +
-                        this->parent_ray_sensor_->LaserShape()->GetRetro(j3) +
-                        this->parent_ray_sensor_->LaserShape()->GetRetro(j4));
-
+      //intensity = 0.25*(this->parent_ray_sensor_->LaserShape()->GetRetro(j1) +
+      //                  this->parent_ray_sensor_->LaserShape()->GetRetro(j2) +
+      //                  this->parent_ray_sensor_->LaserShape()->GetRetro(j3) +
+      //                  this->parent_ray_sensor_->LaserShape()->GetRetro(j4));
+      intensity = 0.25*(this->parent_ray_sensor_->Retro(j1) +
+                        this->parent_ray_sensor_->Retro(j2) +
+                        this->parent_ray_sensor_->Retro(j3) +
+                        this->parent_ray_sensor_->Retro(j4));
       // std::cout << " block debug "
       //           << "  ij("<<i<<","<<j<<")"
       //           << "  j1234("<<j1<<","<<j2<<","<<j3<<","<<j4<<")"
