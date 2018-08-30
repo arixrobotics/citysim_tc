@@ -11,51 +11,21 @@ from prius_msgs.msg import Control
 import sys, select, termios, tty
 
 msg = """
-Reading from the keyboard  and Publishing to Prius Control!
+Reading from the keyboard and Publishing to Prius Control!
 ---------------------------
 Moving around:
    u    i    o
         k    
    m    ,    .
 
-For Holonomic mode (strafing), hold down the shift key:
----------------------------
-   U    I    O
-   J    K    L
-   M    <    >
+anything else : neutral gear
 
-t : up (+z)
-b : down (-z)
-
-anything else : stop
-
-q/z : increase/decrease max speeds by 10%
-w/x : increase/decrease only linear speed by 10%
-e/c : increase/decrease only angular speed by 10%
+q/z : increase/decrease throttle & steering by 10%
+w/x : increase/decrease only throttle by 10%
+e/c : increase/decrease only steering by 10%
 
 CTRL-C to quit
 """
-
-moveBindings = {
-        'i':(1,0,0,0),
-        'o':(1,0,0,-1),
-        'j':(0,0,0,1),
-        'l':(0,0,0,-1),
-        'u':(1,0,0,1),
-        ',':(-1,0,0,0),
-        '.':(-1,0,0,1),
-        'm':(-1,0,0,-1),
-        'O':(1,-1,0,0),
-        'I':(1,0,0,0),
-        'J':(0,1,0,0),
-        'L':(0,-1,0,0),
-        'U':(1,1,0,0),
-        '<':(-1,0,0,0),
-        '>':(-1,-1,0,0),
-        'M':(-1,1,0,0),
-        't':(0,0,1,0),
-        'b':(0,0,-1,0),
-           }
 
 speedBindings={
         'q':(1.1,1.1),
@@ -75,7 +45,7 @@ def getKey():
 
 
 def vels(speed,turn):
-    return "currently:\tspeed %s\tturn %s " % (speed,turn)
+    return "currently:\tthrottle %s\tsteering %s " % (speed,turn)
 
 if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
@@ -85,10 +55,6 @@ if __name__=="__main__":
 
     speed = rospy.get_param("~speed", 0.5)
     turn = rospy.get_param("~turn", 1.0)
-    x = 0
-    y = 0
-    z = 0
-    th = 0
     status = 0
     command = Control()
     try:
