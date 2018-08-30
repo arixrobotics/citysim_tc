@@ -20,7 +20,7 @@ $ rosrun citysim_tc prius_teleop_keyboard.py
 
 To change traffic lights, in Terminal 5:
 $ source catkin_ws/devel/setup.bash  
-$ rostopic pub -1 /gazebo/keypress 'data:"q"'
+$ rostopic pub -1 /gazebo/keypress std_msgs/String "data: 'q'"
 Change the value of data depending on which trafficlights:
 Intersection 1: q/a
 Intersection 1: w/s
