@@ -5,65 +5,21 @@
 
 <sdf version="1.6">
   <world name="default">
-    <plugin name="joy" filename="libJoyPlugin.so">
+  
+    <!--plugin name="joy" filename="libJoyPlugin.so">
       <sticky_buttons>false</sticky_buttons>
       <dead_zone>0.05</dead_zone>
       <rate>60</rate>
       <accumulation_rate>1000</accumulation_rate>
-    </plugin>
-
+    </plugin-->
+    
+    <!--plugin name="ros_topic_to_keyboard" filename="libtopic_keypress_plugin.so"/-->
 
     <gui>
      <camera name="user_camera">
        <pose>-49.08 -1.911 6.95 0 0 -0.0159</pose>
      </camera>
-     <plugin name="keyboard" filename="libKeyboardGUIPlugin.so">
-     </plugin>
-     <plugin name="TrafficLights" filename="libTrafficLightsGUIPlugin.so">
-
-       <!-- Q -->
-       <key value="113" model="stop_light_post_475" color="red"/>
-       <key value="113" model="stop_light_post_482" color="green"/>
-       <key value="113" model="stop_light_post_485" color="green"/>
-       <key value="113" model="stop_light_post_479" color="red"/>
-
-       <!-- A -->
-       <key value="97" model="stop_light_post_475" color="green"/>
-       <key value="97" model="stop_light_post_482" color="red"/>
-       <key value="97" model="stop_light_post_485" color="red"/>
-       <key value="97" model="stop_light_post_479" color="green"/>
-
-       <!-- W -->
-       <key value="119" model="stop_light_post_476" color="red"/>
-       <key value="119" model="stop_light_post_483" color="green"/>
-       <key value="119" model="stop_light_post_480" color="red"/>
-
-       <!-- S -->
-       <key value="115" model="stop_light_post_476" color="green"/>
-       <key value="115" model="stop_light_post_483" color="red"/>
-       <key value="115" model="stop_light_post_480" color="green"/>
-
-       <!-- E -->
-       <key value="101" model="stop_light_post_477" color="red"/>
-       <key value="101" model="stop_light_post_486" color="green"/>
-       <key value="101" model="stop_light_post_481" color="red"/>
-
-       <!-- D -->
-       <key value="100" model="stop_light_post_477" color="green"/>
-       <key value="100" model="stop_light_post_486" color="red"/>
-       <key value="100" model="stop_light_post_481" color="green"/>
-
-       <!-- R -->
-       <key value="114" model="stop_light_post_478" color="red"/>
-       <key value="114" model="stop_light_post_484" color="green"/>
-       <key value="114" model="stop_light_post_487" color="green"/>
-
-       <!-- F -->
-       <key value="102" model="stop_light_post_478" color="green"/>
-       <key value="102" model="stop_light_post_484" color="red"/>
-       <key value="102" model="stop_light_post_487" color="red"/>
-
-     </plugin>
+     
     </gui>
     <scene>
       <grid>false</grid>
@@ -122,8 +78,8 @@
               <name>CitySim/ShinyGrey</name>
             </script>
           </material>
-          <plugin name="bloom" filename="libBloomVisualPlugin.so" />
-          <plugin name="lensflare" filename="libLensFlareVisualPlugin.so" />
+          <!--plugin name="bloom" filename="libBloomVisualPlugin.so" /-->
+          <!--plugin name="lensflare" filename="libLensFlareVisualPlugin.so" /-->
         </visual>
       </link>
     </model>
@@ -5560,7 +5516,7 @@
       <uri>model://pier</uri>
     </include>
 
-
+<!--
     <include>
       <name>oak_tree_78</name>
       <pose>
@@ -5569,7 +5525,7 @@
       5.01
       0
       0
-      1.9683058705937788
+      1.6234431712061277
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5582,7 +5538,7 @@
       5.01
       0
       0
-      1.846150972413804
+      0.837941690456205
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5595,7 +5551,7 @@
       5.01
       0
       0
-      0.23193687017295028
+      0.2370479318878233
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5608,7 +5564,7 @@
       5.01
       0
       0
-      2.439920434074292
+      0.3498558632324766
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5621,7 +5577,7 @@
       5.01
       0
       0
-      1.2202846444852469
+      0.04264783984555141
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5634,7 +5590,7 @@
       5.01
       0
       0
-      0.5646156304765261
+      1.8497189647017287
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5647,7 +5603,7 @@
       5.01
       0
       0
-      1.8334472440087681
+      0.2565193928530721
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5660,7 +5616,7 @@
       5.01
       0
       0
-      1.657803148367775
+      0.2478716814957579
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5673,7 +5629,7 @@
       5.01
       0
       0
-      1.4187236711977314
+      2.306400360780377
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5686,7 +5642,7 @@
       5.01
       0
       0
-      2.284289947606892
+      2.219632002442231
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5699,7 +5655,7 @@
       5.01
       0
       0
-      1.4817292383937386
+      0.8882678471956627
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -5712,12 +5668,12 @@
       5.01
       0
       0
-      0.8100105725922971
+      0.4651583527664631
       </pose>
       <uri>model://oak_tree</uri>
     </include>
 
-
+-->
     <include>
       <name>robocup_3Dsim_field_90</name>
       <pose>
@@ -5760,7 +5716,7 @@
 
     <!-- North road -->
 
-    
+    <!--
         <include>
       <name>pine_tree_93</name>
       <pose>
@@ -5769,7 +5725,7 @@
       5.01
       0
       0
-      1.017933493040731
+      1.1663715311148812
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5783,7 +5739,7 @@
       5.01
       0
       0
-      1.3888966918583037
+      0.4340189495499141
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5797,7 +5753,7 @@
       5.01
       0
       0
-      0.7721094959462292
+      0.07869526293972536
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5811,7 +5767,7 @@
       5.01
       0
       0
-      0.4176791953195905
+      1.1645582674772808
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5825,7 +5781,7 @@
       5.01
       0
       0
-      1.2077624402855358
+      1.3171176176356543
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5840,7 +5796,7 @@
       5.01
       0
       0
-      2.5651580011993578
+      1.4901095511567786
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5854,7 +5810,7 @@
       5.01
       0
       0
-      0.9101100824778227
+      0.4343095041783844
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5868,7 +5824,7 @@
       5.01
       0
       0
-      0.7724506590736943
+      2.495815102575992
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5882,7 +5838,7 @@
       5.01
       0
       0
-      2.873733201466776
+      1.8894377786674768
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5896,7 +5852,7 @@
       5.01
       0
       0
-      1.111177082120837
+      1.4614147011845933
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5911,7 +5867,7 @@
       5.01
       0
       0
-      0.16687165718076
+      0.9077190830040192
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5925,7 +5881,7 @@
       5.01
       0
       0
-      2.500432020051052
+      2.5256377546822804
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5939,7 +5895,7 @@
       5.01
       0
       0
-      1.5794314161333967
+      1.5049239057324382
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5953,7 +5909,7 @@
       5.01
       0
       0
-      0.35510197232109186
+      0.15147573464208078
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5967,7 +5923,7 @@
       5.01
       0
       0
-      2.3923748347305844
+      0.8950406769144229
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5982,7 +5938,7 @@
       5.01
       0
       0
-      0.28505859439096864
+      2.2994534189585467
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -5996,7 +5952,7 @@
       5.01
       0
       0
-      1.7770849787368121
+      0.5383834669194769
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6010,7 +5966,7 @@
       5.01
       0
       0
-      3.05175022619782
+      0.04086503736271934
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6024,7 +5980,7 @@
       5.01
       0
       0
-      1.3349095265268933
+      0.44832481149539066
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6038,13 +5994,13 @@
       5.01
       0
       0
-      1.8676927486851371
+      1.0636190424472556
       </pose>
       <uri>model://pine_tree</uri>
     </include>
 
       
-    
+    -->
 
     <!-- Block 0 0 -->
 
@@ -6126,7 +6082,7 @@
       </pose>
       <uri>model://house_3</uri>
     </include>
-
+<!--
     <include>
       <name>oak_tree_119</name>
       <pose>
@@ -6174,7 +6130,7 @@
       5.01
       0
       0
-      2.2237533609811653
+      1.730295289887727
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6187,7 +6143,7 @@
       5.01
       0
       0
-      1.765244211124174
+      1.6968734917768173
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6200,7 +6156,7 @@
       5.01
       0
       0
-      0.0011425933319262028
+      0.9431040488804249
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6213,7 +6169,7 @@
       5.01
       0
       0
-      1.0675942862344894
+      1.3045257101628134
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6226,7 +6182,7 @@
       5.01
       0
       0
-      2.5393320236750885
+      1.9248151376297813
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -6239,11 +6195,11 @@
       5.01
       0
       0
-      0.5090299151498098
+      1.1006448115596976
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
     <include>
       <name>fire_hydrant_128</name>
       <pose>
@@ -6311,7 +6267,7 @@
       </pose>
       <uri>model://house_3</uri>
     </include>
-
+<!--
     <include>
       <name>oak_tree_133</name>
       <pose>
@@ -6337,7 +6293,7 @@
       </pose>
       <uri>model://oak_tree</uri>
     </include>
-
+-->
     <include>
       <name>house_2_135</name>
       <pose>
@@ -6448,7 +6404,7 @@
 </model>
 
     <include>
-      <name>hatchback_139</name>
+      <name>suv_139</name>
       <pose>
       61.9
       -12.36
@@ -6457,7 +6413,7 @@
       0
       0
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://suv</uri>
     </include>
 
 
@@ -6473,7 +6429,7 @@
       </pose>
       <uri>model://apartment</uri>
     </include>
-
+<!--
     <include>
       <name>oak_tree_141</name>
       <pose>
@@ -6482,7 +6438,7 @@
       5.01
       0
       0
-      1.078751173867872
+      0.4428057002754041
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -6495,7 +6451,7 @@
       5.01
       0
       0
-      1.440589973986151
+      1.5736359982294998
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -6508,7 +6464,7 @@
       5.01
       0
       0
-      1.2241501009351445
+      0.6913121441842207
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -6521,11 +6477,11 @@
       5.01
       0
       0
-      0.1596970104805755
+      1.3934177762224809
       </pose>
       <uri>model://oak_tree</uri>
     </include>
-
+-->
     <include>
       <name>fire_hydrant_145</name>
       <pose>
@@ -6647,7 +6603,7 @@
 </model>
 
     <include>
-      <name>hatchback_red_150</name>
+      <name>suv_150</name>
       <pose>
       86.87
       -60.0
@@ -6656,7 +6612,7 @@
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback_red</uri>
+      <uri>model://suv</uri>
     </include>
 
     <include>
@@ -6685,7 +6641,7 @@
       <uri>model://fire_hydrant</uri>
     </include>
 
-
+<!--
     
       <include>
       <name>cafe_table_153</name>
@@ -6986,9 +6942,9 @@
       <uri>model://cafe_table</uri>
     </include>
 
-      
+      -->
     
-
+<!--
     
       <include>
       <name>oak_tree_174</name>
@@ -6998,7 +6954,7 @@
       5.01
       0
       0
-      3.043434229423637
+      1.7807411433224916
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7008,11 +6964,11 @@
       <name>oak_tree_175</name>
       <pose>
       54.0
-      -87.13016296337463
+      -87.68145545574411
       5.01
       0
       0
-      2.9955820275354577
+      1.6882581136315664
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7022,11 +6978,11 @@
       <name>oak_tree_176</name>
       <pose>
       54.0
-      -86.671556303624
+      -84.19316905410335
       5.01
       0
       0
-      1.185636681420089
+      0.5720858555358996
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7036,11 +6992,11 @@
       <name>oak_tree_177</name>
       <pose>
       54.0
-      -84.13506046966718
+      -82.19372797970902
       5.01
       0
       0
-      1.1036279907120554
+      1.700841244645758
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7050,11 +7006,11 @@
       <name>oak_tree_178</name>
       <pose>
       54.0
-      -83.20031014906496
+      -81.9263418352509
       5.01
       0
       0
-      0.7469063321630626
+      1.6400047763463064
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7064,11 +7020,11 @@
       <name>oak_tree_179</name>
       <pose>
       54.0
-      -80.98728457662642
+      -79.50044772955185
       5.01
       0
       0
-      1.4016152687349916
+      2.8584353341983433
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7078,11 +7034,11 @@
       <name>oak_tree_180</name>
       <pose>
       54.0
-      -73.34781682686742
+      -77.55487667898906
       5.01
       0
       0
-      2.563826606494008
+      0.3158503329205437
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7092,11 +7048,11 @@
       <name>oak_tree_181</name>
       <pose>
       54.0
-      -76.64925109436746
+      -76.5666430724498
       5.01
       0
       0
-      2.6177475026096633
+      0.6650403815016199
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7106,11 +7062,11 @@
       <name>oak_tree_182</name>
       <pose>
       54.0
-      -76.52473146585189
+      -72.39832667262242
       5.01
       0
       0
-      1.4293653517191087
+      2.8360108268074002
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7120,11 +7076,11 @@
       <name>oak_tree_183</name>
       <pose>
       54.0
-      -75.13594440239312
+      -69.48409714167693
       5.01
       0
       0
-      1.9987438882715116
+      0.23008499662858373
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7134,11 +7090,11 @@
       <name>oak_tree_184</name>
       <pose>
       54.0
-      -66.88736933033286
+      -73.58702791370882
       5.01
       0
       0
-      2.0022271584495237
+      1.270544679758037
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7148,11 +7104,11 @@
       <name>oak_tree_185</name>
       <pose>
       54.0
-      -59.654544925284654
+      -67.2562534119266
       5.01
       0
       0
-      2.682722684789697
+      0.35688080269749006
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7162,11 +7118,11 @@
       <name>oak_tree_186</name>
       <pose>
       54.0
-      -66.12713354501358
+      -58.37292207324148
       5.01
       0
       0
-      2.8101151048648343
+      1.48185088923336
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7176,12 +7132,12 @@
       <include>
       <name>oak_tree_187</name>
       <pose>
-      57.774896534475005
+      56.1574068090763
       -90.0
       5.01
       0
       0
-      0.9042880771003071
+      2.769714202471519
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7190,12 +7146,12 @@
       <include>
       <name>oak_tree_188</name>
       <pose>
-      56.83073192108227
-      -87.18336017136792
+      56.208936427669336
+      -88.10243992062263
       5.01
       0
       0
-      2.0665834895520203
+      0.665682525397477
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7204,12 +7160,12 @@
       <include>
       <name>oak_tree_189</name>
       <pose>
-      56.42280249377397
-      -86.6343625538636
+      56.45116396129917
+      -85.39674019608528
       5.01
       0
       0
-      3.0680074374344644
+      0.7286120129732976
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7218,12 +7174,12 @@
       <include>
       <name>oak_tree_190</name>
       <pose>
-      57.45932590810307
-      -84.7405147818148
+      55.85399280880852
+      -82.34428140428001
       5.01
       0
       0
-      1.1990345161202638
+      1.291187695286802
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7232,12 +7188,12 @@
       <include>
       <name>oak_tree_191</name>
       <pose>
-      57.284138426393845
-      -81.40839360063244
+      57.448174918142946
+      -83.12876821986988
       5.01
       0
       0
-      0.5327956155551997
+      1.6293760872428544
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7246,12 +7202,12 @@
       <include>
       <name>oak_tree_192</name>
       <pose>
-      55.882978058317605
-      -76.43216427617581
+      57.81137016715948
+      -75.25475406754963
       5.01
       0
       0
-      2.307661798957486
+      2.958114797725525
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7260,12 +7216,12 @@
       <include>
       <name>oak_tree_193</name>
       <pose>
-      56.684328170263065
-      -75.89461099734676
+      57.51765403822865
+      -72.5356671651079
       5.01
       0
       0
-      1.2800493208184769
+      0.4367695462625113
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7274,12 +7230,12 @@
       <include>
       <name>oak_tree_194</name>
       <pose>
-      57.75616355705332
-      -73.00579026904094
+      57.992037707231624
+      -75.54949808590854
       5.01
       0
       0
-      0.18283265327853704
+      0.08526215964367433
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7288,12 +7244,12 @@
       <include>
       <name>oak_tree_195</name>
       <pose>
-      57.01467259064473
-      -76.76746915807858
+      57.26798861176418
+      -70.61149162376202
       5.01
       0
       0
-      1.5373234372341857
+      1.8454065752314628
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7302,12 +7258,12 @@
       <include>
       <name>oak_tree_196</name>
       <pose>
-      55.91738621276623
-      -63.446904301731415
+      57.992809575812956
+      -67.36012459199168
       5.01
       0
       0
-      2.8671201195573994
+      0.7880429608987733
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7316,12 +7272,12 @@
       <include>
       <name>oak_tree_197</name>
       <pose>
-      56.60984875089379
-      -61.0802338103875
+      56.42056307282864
+      -71.93538033744208
       5.01
       0
       0
-      0.6369009345574607
+      2.4810786089464054
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7330,12 +7286,12 @@
       <include>
       <name>oak_tree_198</name>
       <pose>
-      57.553611473909655
-      -65.27803914955238
+      57.470730589611975
+      -58.45582338712091
       5.01
       0
       0
-      0.6779573600616609
+      1.7279672262915005
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7344,12 +7300,12 @@
       <include>
       <name>oak_tree_199</name>
       <pose>
-      57.104996188710686
-      -62.78836854421783
+      57.15797118083183
+      -56.35635611930383
       5.01
       0
       0
-      2.411672038329381
+      2.803401763258105
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7359,12 +7315,12 @@
       <include>
       <name>oak_tree_200</name>
       <pose>
-      59.989037256373265
+      58.13270999500757
       -90.0
       5.01
       0
       0
-      0.10925714927772529
+      2.764688262838838
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7373,12 +7329,12 @@
       <include>
       <name>oak_tree_201</name>
       <pose>
-      61.20684931338097
-      -88.19321443936646
+      60.812070044744424
+      -88.17708267199514
       5.01
       0
       0
-      0.3773018974881534
+      2.306584470257578
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7387,12 +7343,12 @@
       <include>
       <name>oak_tree_202</name>
       <pose>
-      57.60470841660027
-      -84.92657858974593
+      58.675125452794845
+      -84.72005905475548
       5.01
       0
       0
-      2.764663457847921
+      2.3995074863092944
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7401,12 +7357,12 @@
       <include>
       <name>oak_tree_203</name>
       <pose>
-      60.81195898561188
-      -83.24224741653443
+      58.751564539477435
+      -84.85603634153118
       5.01
       0
       0
-      0.6052250445299527
+      0.2778339789612391
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7415,12 +7371,12 @@
       <include>
       <name>oak_tree_204</name>
       <pose>
-      61.01525467664881
-      -82.06717559218225
+      61.814315720443346
+      -79.5767080699963
       5.01
       0
       0
-      1.9275908584222476
+      1.6372728185613652
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7429,12 +7385,12 @@
       <include>
       <name>oak_tree_205</name>
       <pose>
-      57.209851782022085
-      -77.75675130783374
+      59.7416100395184
+      -76.97242822734744
       5.01
       0
       0
-      0.26688838737200743
+      2.4103100781076017
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7443,12 +7399,12 @@
       <include>
       <name>oak_tree_206</name>
       <pose>
-      61.01412412487423
-      -77.00464969072803
+      58.640367882986524
+      -74.42674807385453
       5.01
       0
       0
-      2.351996761610725
+      3.090825616456355
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7457,12 +7413,12 @@
       <include>
       <name>oak_tree_207</name>
       <pose>
-      58.71981024621551
-      -71.53273274702076
+      59.99947444101913
+      -75.0405964184975
       5.01
       0
       0
-      0.9210436312069575
+      1.4123661022876113
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7471,12 +7427,12 @@
       <include>
       <name>oak_tree_208</name>
       <pose>
-      57.53451676933988
-      -73.71100949337648
+      61.53156830748591
+      -73.99159673308066
       5.01
       0
       0
-      2.9634324638314715
+      2.4390548622275565
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7485,12 +7441,12 @@
       <include>
       <name>oak_tree_209</name>
       <pose>
-      58.12601122386497
-      -70.41153618746768
+      59.803392233298084
+      -63.797987481515236
       5.01
       0
       0
-      1.9465270812461
+      0.5880161235758002
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7499,12 +7455,12 @@
       <include>
       <name>oak_tree_210</name>
       <pose>
-      57.32907431501164
-      -64.15401637595203
+      58.597157636727275
+      -71.30697885178175
       5.01
       0
       0
-      0.8998761619375686
+      0.2633617499439685
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7513,12 +7469,12 @@
       <include>
       <name>oak_tree_211</name>
       <pose>
-      58.528589811543455
-      -62.082533074542596
+      61.99673285106873
+      -68.09932099333882
       5.01
       0
       0
-      0.7046739674677389
+      1.2612318351687304
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7527,12 +7483,12 @@
       <include>
       <name>oak_tree_212</name>
       <pose>
-      57.002598127959104
-      -61.113540977525915
+      57.60673715651991
+      -67.97806577896547
       5.01
       0
       0
-      2.149239171598171
+      0.9121293108697811
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7542,12 +7498,12 @@
       <include>
       <name>oak_tree_213</name>
       <pose>
-      61.301321223409275
+      59.041914242069126
       -90.0
       5.01
       0
       0
-      2.7307108239391438
+      2.9364984486737074
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7556,12 +7512,12 @@
       <include>
       <name>oak_tree_214</name>
       <pose>
-      64.49036044406077
-      -87.26335456586924
+      65.87000383673251
+      -88.46913837726721
       5.01
       0
       0
-      1.904090855368436
+      0.8435777167167121
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7570,12 +7526,12 @@
       <include>
       <name>oak_tree_215</name>
       <pose>
-      58.81891639308776
-      -86.26080912432111
+      65.64823196552553
+      -86.94128029433182
       5.01
       0
       0
-      3.0120865648141284
+      0.6475554619467027
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7584,12 +7540,12 @@
       <include>
       <name>oak_tree_216</name>
       <pose>
-      61.27497684684958
-      -83.9877569942561
+      61.207486176338335
+      -83.01504770199976
       5.01
       0
       0
-      1.8847472146488657
+      1.1016411123897611
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7598,12 +7554,12 @@
       <include>
       <name>oak_tree_217</name>
       <pose>
-      63.84128494173274
-      -82.41495239694254
+      64.61346238677913
+      -81.12783358674663
       5.01
       0
       0
-      0.5732027166855735
+      2.190531670983007
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7612,12 +7568,12 @@
       <include>
       <name>oak_tree_218</name>
       <pose>
-      64.64174704518497
-      -76.57486105095387
+      61.787627940446164
+      -75.80553889872718
       5.01
       0
       0
-      2.750869836630822
+      1.9365505635648939
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7626,12 +7582,12 @@
       <include>
       <name>oak_tree_219</name>
       <pose>
-      62.72363200770877
-      -73.43724533632688
+      63.93985137430756
+      -75.31106871781125
       5.01
       0
       0
-      1.7165497935388045
+      0.18695410083479416
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7640,12 +7596,12 @@
       <include>
       <name>oak_tree_220</name>
       <pose>
-      64.30706158453951
-      -78.22256258176134
+      65.44042438497223
+      -73.54117704071898
       5.01
       0
       0
-      0.49124836214860995
+      0.2604286950840531
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7654,12 +7610,12 @@
       <include>
       <name>oak_tree_221</name>
       <pose>
-      62.10870239469195
-      -69.81482574421264
+      62.00582282404426
+      -66.31339325015321
       5.01
       0
       0
-      1.459414292738063
+      1.4070793229781144
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7668,12 +7624,12 @@
       <include>
       <name>oak_tree_222</name>
       <pose>
-      60.85781254389885
-      -65.4413961081579
+      65.18712664253741
+      -65.56252596264827
       5.01
       0
       0
-      2.3225438921445987
+      0.6273761744980172
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7682,12 +7638,12 @@
       <include>
       <name>oak_tree_223</name>
       <pose>
-      60.37725807147789
-      -62.78863112371922
+      64.8395112403962
+      -69.85051673213862
       5.01
       0
       0
-      2.1257967129815567
+      0.22610994324699502
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7696,12 +7652,12 @@
       <include>
       <name>oak_tree_224</name>
       <pose>
-      65.37525747666689
-      -60.480848104132676
+      62.33649109339352
+      -71.4181095297273
       5.01
       0
       0
-      1.789275646174655
+      2.8654574173852922
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7710,12 +7666,12 @@
       <include>
       <name>oak_tree_225</name>
       <pose>
-      64.84208053623955
-      -54.61260682108184
+      58.536478774258995
+      -65.14611249986267
       5.01
       0
       0
-      2.316562349712931
+      1.7488714346262266
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7725,12 +7681,12 @@
       <include>
       <name>oak_tree_226</name>
       <pose>
-      64.9147716631186
+      61.17044137995384
       -90.0
       5.01
       0
       0
-      0.3653025815530174
+      1.9743402814486648
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7739,12 +7695,12 @@
       <include>
       <name>oak_tree_227</name>
       <pose>
-      61.158776318272466
-      -87.78752980410093
+      68.56331460643631
+      -87.5781812011534
       5.01
       0
       0
-      1.8371429640960393
+      0.0076987168725106605
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7753,12 +7709,12 @@
       <include>
       <name>oak_tree_228</name>
       <pose>
-      64.01717851707848
-      -84.37773292775158
+      63.335239742923406
+      -84.11621240889639
       5.01
       0
       0
-      2.2626706889584645
+      2.1367678219490696
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7767,12 +7723,12 @@
       <include>
       <name>oak_tree_229</name>
       <pose>
-      68.15216156084551
-      -82.5727961756105
+      64.83700129522701
+      -82.12082896410232
       5.01
       0
       0
-      1.5775189983007294
+      1.9089253073510843
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7781,12 +7737,12 @@
       <include>
       <name>oak_tree_230</name>
       <pose>
-      62.94058278802902
-      -81.34455765656548
+      65.54257813627464
+      -79.1054048114944
       5.01
       0
       0
-      1.9562364975861886
+      3.0918659384842084
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7795,12 +7751,12 @@
       <include>
       <name>oak_tree_231</name>
       <pose>
-      65.55216615619929
-      -80.24285710734428
+      67.57788638563835
+      -81.11203522257446
       5.01
       0
       0
-      1.2773594553136718
+      2.6464249805321023
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7809,12 +7765,12 @@
       <include>
       <name>oak_tree_232</name>
       <pose>
-      65.4432230227764
-      -76.75807702702284
+      68.91286335921565
+      -72.41568210829058
       5.01
       0
       0
-      1.4572847714971142
+      2.2384303722160945
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7823,12 +7779,12 @@
       <include>
       <name>oak_tree_233</name>
       <pose>
-      65.34543209504503
-      -78.73392711072262
+      67.26828634259496
+      -78.77238276530582
       5.01
       0
       0
-      1.7795743166404256
+      0.5291318315496869
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7837,12 +7793,12 @@
       <include>
       <name>oak_tree_234</name>
       <pose>
-      68.37469404147642
-      -70.43539660310134
+      64.58878158049454
+      -73.67990511552861
       5.01
       0
       0
-      2.473946986246857
+      1.7825397040506736
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7851,12 +7807,12 @@
       <include>
       <name>oak_tree_235</name>
       <pose>
-      62.74939403555264
-      -71.78278188584696
+      64.53334584418434
+      -74.23868108368102
       5.01
       0
       0
-      0.4205533895500262
+      0.08987726596582873
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7865,12 +7821,12 @@
       <include>
       <name>oak_tree_236</name>
       <pose>
-      67.68629635421266
-      -71.33923883588565
+      66.53899609830022
+      -67.72497737435798
       5.01
       0
       0
-      1.4954884333321685
+      2.8710752132117583
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7879,12 +7835,12 @@
       <include>
       <name>oak_tree_237</name>
       <pose>
-      60.211076380017204
-      -60.86505746529796
+      60.84376007589928
+      -71.44747914058537
       5.01
       0
       0
-      1.641364789181088
+      1.9522707942213604
       </pose>
       <uri>model://oak_tree</uri>
     </include>
@@ -7893,30 +7849,30 @@
       <include>
       <name>oak_tree_238</name>
       <pose>
-      60.73769105981263
-      -66.47931480008641
+      68.34076008726413
+      -54.403774136798
       5.01
       0
       0
-      2.51771563390508
+      2.8329378301261126
       </pose>
       <uri>model://oak_tree</uri>
     </include>
 
-      
+      -->
     
 
     <!-- Block 1 0 -->
-
+<!--
     <include>
       <name>pine_tree_239</name>
       <pose>
-      11.276329562462964
-      60.543330873038
+      19.71769629986509
+      87.64957099026327
       5.01
       0
       0
-      2.45695787850193
+      0.08834841696753863
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7924,12 +7880,12 @@
     <include>
       <name>pine_tree_240</name>
       <pose>
-      7.148579764734789
-      55.78255758166197
+      21.952339063894648
+      64.50972358970539
       5.01
       0
       0
-      0.1420481959132083
+      1.4180685239378898
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7937,12 +7893,12 @@
     <include>
       <name>pine_tree_241</name>
       <pose>
-      -3.2549818362481258
-      88.63454772223135
+      0.006266023326933379
+      74.15612617855041
       5.01
       0
       0
-      2.070691284153795
+      1.5361696636880764
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7950,12 +7906,12 @@
     <include>
       <name>pine_tree_242</name>
       <pose>
-      3.1326703764029826
-      88.32732682375266
+      -1.007879046939883
+      81.33988980838224
       5.01
       0
       0
-      2.047840507388953
+      1.6363602144865947
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7963,12 +7919,12 @@
     <include>
       <name>pine_tree_243</name>
       <pose>
-      11.749029411461033
-      62.38229671495166
+      -1.0911932221214684
+      60.25977464354172
       5.01
       0
       0
-      2.4890630310914412
+      2.596442759751842
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7976,12 +7932,12 @@
     <include>
       <name>pine_tree_244</name>
       <pose>
-      26.40219251910613
-      71.02445485398107
+      34.1784020589725
+      78.73034031066507
       5.01
       0
       0
-      0.8821811288395808
+      0.2098994923918648
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -7989,12 +7945,12 @@
     <include>
       <name>pine_tree_245</name>
       <pose>
-      1.1832211437485594
-      75.68349630224913
+      -5.042576532936491
+      63.251153003146705
       5.01
       0
       0
-      2.154959212278051
+      1.6805715562647003
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8002,12 +7958,12 @@
     <include>
       <name>pine_tree_246</name>
       <pose>
-      34.603106887087094
-      87.29902854300755
+      9.109202348593735
+      61.53305689516471
       5.01
       0
       0
-      1.5523919189715623
+      1.5122042028526668
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8015,12 +7971,12 @@
     <include>
       <name>pine_tree_247</name>
       <pose>
-      7.8245011768725465
-      70.61254061542864
+      -5.831426848263592
+      63.812582241338255
       5.01
       0
       0
-      0.5948934805086372
+      0.5904296265430844
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8028,12 +7984,12 @@
     <include>
       <name>pine_tree_248</name>
       <pose>
-      3.811791430132258
-      86.24939813006335
+      26.277846480264664
+      87.61267361041394
       5.01
       0
       0
-      1.3286873500851646
+      1.4758153536212482
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8041,12 +7997,12 @@
     <include>
       <name>pine_tree_249</name>
       <pose>
-      20.023650189793337
-      66.39490016298345
+      13.047067862435101
+      80.02928048304216
       5.01
       0
       0
-      2.1789202054490153
+      0.6240538940620047
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8054,12 +8010,12 @@
     <include>
       <name>pine_tree_250</name>
       <pose>
-      17.38436579673187
-      66.92140902715684
+      24.95750677369803
+      74.03660165765544
       5.01
       0
       0
-      2.27045169884009
+      0.9779115410708614
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8067,12 +8023,12 @@
     <include>
       <name>pine_tree_251</name>
       <pose>
-      9.970098648775982
-      77.22502879653837
+      29.236717755298308
+      54.219373979508276
       5.01
       0
       0
-      2.4000538442645807
+      0.9817924838292779
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8080,12 +8036,12 @@
     <include>
       <name>pine_tree_252</name>
       <pose>
-      1.46649345141536
-      56.983413984966916
+      28.710214055454557
+      63.03079847709189
       5.01
       0
       0
-      2.044003702324457
+      2.056232297096095
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8093,12 +8049,12 @@
     <include>
       <name>pine_tree_253</name>
       <pose>
-      31.607509352502497
-      85.13868758188464
+      14.46209262072975
+      91.53803806364344
       5.01
       0
       0
-      0.019663959582844854
+      2.4620715586496558
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8106,12 +8062,12 @@
     <include>
       <name>pine_tree_254</name>
       <pose>
-      12.845097887787263
-      77.7554699283329
+      10.595490612211721
+      71.28766167720988
       5.01
       0
       0
-      1.9617348820005625
+      2.4355317313888234
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8119,16 +8075,16 @@
     <include>
       <name>pine_tree_255</name>
       <pose>
-      5.214496049673883
-      72.89853712537891
+      5.172899713922266
+      81.0929318231327
       5.01
       0
       0
-      2.7095876078368
+      3.013697190214162
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
 
     <include>
       <name>playground_256</name>
@@ -8151,7 +8107,7 @@
       5.01
       0
       0
-      2.8492427604369452
+      2.582084680078702
       </pose>
       <uri>model://fountain</uri>
     </include>
@@ -8210,7 +8166,7 @@
       </pose>
       <uri>model://salon</uri>
     </include>
-
+<!--
     <include>
       <name>oak_tree_262</name>
       <pose>
@@ -8223,7 +8179,7 @@
       </pose>
       <uri>model://oak_tree</uri>
     </include>
-
+-->
     <include>
       <name>apartment_263</name>
       <pose>
@@ -8249,7 +8205,7 @@
       </pose>
       <uri>model://osrf_first_office</uri>
     </include>
-
+<!--
     <include>
       <name>pine_tree_265</name>
       <pose>
@@ -8258,7 +8214,7 @@
       5.01
       0
       0
-      0.633046366007848
+      2.912133759716252
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8271,7 +8227,7 @@
       5.01
       0
       0
-      2.0589893570639
+      2.3758040023948586
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8284,7 +8240,7 @@
       5.01
       0
       0
-      2.462378133590559
+      3.0298742222144615
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8301,7 +8257,7 @@
       </pose>
       <uri>model://oak_tree</uri>
     </include>
-
+-->
     <include>
       <name>postbox_269</name>
       <pose>
@@ -8358,7 +8314,7 @@
     </include>
 
 
-    
+    <!--
       <include>
       <name>cafe_table_273</name>
       <pose>
@@ -8756,7 +8712,7 @@
       <uri>model://cafe_table</uri>
     </include>
 
-      
+      -->
     
 
     <include>
@@ -8798,7 +8754,7 @@
       <uri>model://house_2</uri>
     </include>
 
-
+<!--
     
       <include>
       <name>pine_tree_304</name>
@@ -8808,7 +8764,7 @@
       5.01
       0
       0
-      0.2476682071401707
+      1.597394054725551
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8822,7 +8778,7 @@
       5.01
       0
       0
-      0.7190234356756797
+      2.4817239157866275
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8836,7 +8792,7 @@
       5.01
       0
       0
-      1.1743156674261659
+      0.19158014260906409
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8850,7 +8806,7 @@
       5.01
       0
       0
-      0.35168776214713365
+      1.304725267857528
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8864,7 +8820,7 @@
       5.01
       0
       0
-      2.818306412401645
+      2.980634136027444
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8880,7 +8836,7 @@
       5.01
       0
       0
-      1.2675809384654686
+      2.394217926951059
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8894,7 +8850,7 @@
       5.01
       0
       0
-      2.9061251416630314
+      1.1893155651532272
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8908,7 +8864,7 @@
       5.01
       0
       0
-      1.4728599711104036
+      2.6077805518727164
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8922,7 +8878,7 @@
       5.01
       0
       0
-      1.1850933284703518
+      0.4094100933836213
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8936,7 +8892,7 @@
       5.01
       0
       0
-      3.089644757087681
+      2.6494245979905298
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8950,7 +8906,7 @@
       5.01
       0
       0
-      1.6943165196486878
+      2.4179416126453863
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8966,7 +8922,7 @@
       5.01
       0
       0
-      1.682898930654514
+      3.1169628467520956
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8980,7 +8936,7 @@
       5.01
       0
       0
-      1.9454441242469007
+      0.6350091954311053
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -8994,7 +8950,7 @@
       5.01
       0
       0
-      1.3331698100089138
+      0.73172023719443
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9008,7 +8964,7 @@
       5.01
       0
       0
-      1.3039600997720073
+      1.5820696748733232
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9022,12 +8978,12 @@
       5.01
       0
       0
-      2.656139530456668
+      2.087523837816141
       </pose>
       <uri>model://pine_tree</uri>
     </include>
 
-    
+    -->
 
     <!-- Block 1 3 -->
 
@@ -9122,7 +9078,7 @@
   </link>
 </model>
 
-
+<!--
     
       <include>
       <name>pine_tree_323</name>
@@ -9132,7 +9088,7 @@
       5.01
       0
       0
-      1.2765590371774793
+      2.5287408911208233
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9146,7 +9102,7 @@
       5.01
       0
       0
-      1.4016687007575022
+      2.0208314498737057
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9160,7 +9116,7 @@
       5.01
       0
       0
-      2.0891116665790705
+      3.0505329433061497
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9174,7 +9130,7 @@
       5.01
       0
       0
-      2.9955362219595476
+      1.4467376069400129
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9188,7 +9144,7 @@
       5.01
       0
       0
-      0.6555938458777234
+      1.881697356849494
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9202,7 +9158,7 @@
       5.01
       0
       0
-      1.895461386796672
+      0.17249724279536996
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9216,7 +9172,7 @@
       5.01
       0
       0
-      2.0413200634179405
+      0.7602628939790371
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9230,7 +9186,7 @@
       5.01
       0
       0
-      1.2898688094994166
+      2.324956615295129
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9244,7 +9200,7 @@
       5.01
       0
       0
-      1.7722302839987016
+      0.39277831215307507
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9258,7 +9214,7 @@
       5.01
       0
       0
-      0.7715524667247463
+      1.0735687177544777
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9272,7 +9228,7 @@
       5.01
       0
       0
-      2.4272731843361317
+      2.7154554506889155
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9286,7 +9242,7 @@
       5.01
       0
       0
-      1.4716100134541972
+      2.3858770930751088
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9300,7 +9256,7 @@
       5.01
       0
       0
-      0.16621563219642485
+      2.2554785652208804
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9314,7 +9270,7 @@
       5.01
       0
       0
-      2.7928302351829273
+      0.015399587276664666
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9328,7 +9284,7 @@
       5.01
       0
       0
-      2.171595608379576
+      2.9252113363081507
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9342,7 +9298,7 @@
       5.01
       0
       0
-      1.9104077510914748
+      0.8657180169884192
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9356,7 +9312,7 @@
       5.01
       0
       0
-      0.23596238273094478
+      2.1712295484069934
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9370,7 +9326,7 @@
       5.01
       0
       0
-      1.5403419032878571
+      1.5437493174631338
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9384,7 +9340,7 @@
       5.01
       0
       0
-      0.8263529400203099
+      1.5240712814638717
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9398,7 +9354,7 @@
       5.01
       0
       0
-      1.214982679015361
+      0.986854027586672
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9412,7 +9368,7 @@
       5.01
       0
       0
-      0.9274917557756593
+      2.2624969343948096
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9426,7 +9382,7 @@
       5.01
       0
       0
-      1.0614967748465205
+      2.9913200834590703
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9440,7 +9396,7 @@
       5.01
       0
       0
-      1.4604029022797356
+      1.2948570298163795
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9454,7 +9410,7 @@
       5.01
       0
       0
-      2.2378481792349696
+      2.842353632416468
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9468,7 +9424,7 @@
       5.01
       0
       0
-      0.4442327198054707
+      1.9904797654970003
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9482,7 +9438,7 @@
       5.01
       0
       0
-      1.0973257072311384
+      3.0424630903228347
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9496,7 +9452,7 @@
       5.01
       0
       0
-      0.669556412785958
+      2.02843797971399
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9510,7 +9466,7 @@
       5.01
       0
       0
-      0.9735994715923927
+      1.0197423819431088
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9524,7 +9480,7 @@
       5.01
       0
       0
-      0.7465471842349154
+      1.8815732515321884
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9540,7 +9496,7 @@
       5.01
       0
       0
-      0.30914111777239445
+      0.6686469030925416
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9554,7 +9510,7 @@
       5.01
       0
       0
-      0.8891016095189741
+      1.6895850729204371
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9568,7 +9524,7 @@
       5.01
       0
       0
-      3.104389480032605
+      1.8374823464630043
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9582,7 +9538,7 @@
       5.01
       0
       0
-      2.1240487208709666
+      2.5480499623704773
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9596,7 +9552,7 @@
       5.01
       0
       0
-      2.890653516734985
+      1.7391220433254544
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9610,7 +9566,7 @@
       5.01
       0
       0
-      1.8935326626574331
+      3.0510591502707216
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9624,7 +9580,7 @@
       5.01
       0
       0
-      2.041934321059822
+      2.2571965226732993
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9638,7 +9594,7 @@
       5.01
       0
       0
-      2.0866490902031285
+      1.1970932735136288
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9652,7 +9608,7 @@
       5.01
       0
       0
-      2.0430063602276483
+      1.0029605618052835
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9666,7 +9622,7 @@
       5.01
       0
       0
-      1.7522251838926426
+      3.0899488726034168
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9680,7 +9636,7 @@
       5.01
       0
       0
-      1.3955608111614317
+      0.19895507883826108
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9694,7 +9650,7 @@
       5.01
       0
       0
-      1.245638689693971
+      1.126240046799628
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9708,7 +9664,7 @@
       5.01
       0
       0
-      2.0836175911524646
+      2.668938952367021
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9722,7 +9678,7 @@
       5.01
       0
       0
-      2.5306553958467157
+      0.36331348839187394
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9736,7 +9692,7 @@
       5.01
       0
       0
-      1.3028365400484645
+      1.5860116010748295
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9750,7 +9706,7 @@
       5.01
       0
       0
-      1.8346133385363494
+      0.727537874063049
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9764,7 +9720,7 @@
       5.01
       0
       0
-      1.2198235481327937
+      1.0086377400878639
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9778,7 +9734,7 @@
       5.01
       0
       0
-      2.8426601378968996
+      1.619492926381523
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9792,7 +9748,7 @@
       5.01
       0
       0
-      0.41490154752726555
+      0.051524831281651945
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9806,7 +9762,7 @@
       5.01
       0
       0
-      0.4939307733227588
+      2.8926069407242543
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9820,7 +9776,7 @@
       5.01
       0
       0
-      1.6727075664570028
+      0.20556117632948184
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9834,7 +9790,7 @@
       5.01
       0
       0
-      2.5738040328190643
+      2.7405600878328804
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9848,7 +9804,7 @@
       5.01
       0
       0
-      0.9913243008147081
+      1.5968448962517212
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9862,7 +9818,7 @@
       5.01
       0
       0
-      0.9996777245774369
+      1.9031398164338504
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9876,7 +9832,7 @@
       5.01
       0
       0
-      1.0527456038472902
+      2.5356273164950753
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9890,7 +9846,7 @@
       5.01
       0
       0
-      1.3552258605727545
+      2.5116381455764545
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9904,7 +9860,7 @@
       5.01
       0
       0
-      2.977211135443785
+      0.2843745520108878
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9918,7 +9874,7 @@
       5.01
       0
       0
-      2.2121721107895596
+      1.1180189938728555
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9932,7 +9888,7 @@
       5.01
       0
       0
-      1.3895323580424412
+      0.48139515465252547
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9948,7 +9904,7 @@
       5.01
       0
       0
-      1.2896774770749473
+      0.7891603803655931
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9962,7 +9918,7 @@
       5.01
       0
       0
-      0.0683589939607486
+      1.4521640637230855
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9976,7 +9932,7 @@
       5.01
       0
       0
-      0.7430131596193682
+      0.229757774755848
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -9990,7 +9946,7 @@
       5.01
       0
       0
-      0.9060348658452061
+      0.5774803930945964
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10004,7 +9960,7 @@
       5.01
       0
       0
-      2.847172393791529
+      1.2709660808305814
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10018,7 +9974,7 @@
       5.01
       0
       0
-      1.1953461532078595
+      2.8878756084485646
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10032,7 +9988,7 @@
       5.01
       0
       0
-      0.08899589171374768
+      0.7080341748157535
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10046,7 +10002,7 @@
       5.01
       0
       0
-      2.859903923881389
+      3.0674635549925386
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10060,7 +10016,7 @@
       5.01
       0
       0
-      0.5016730939680891
+      1.6638021649258554
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10074,7 +10030,7 @@
       5.01
       0
       0
-      2.3890161457027803
+      2.1928923173421326
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10088,7 +10044,7 @@
       5.01
       0
       0
-      0.3230765603566626
+      0.7730878804757917
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10102,7 +10058,7 @@
       5.01
       0
       0
-      1.5831791612644996
+      1.9439089217349426
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10116,7 +10072,7 @@
       5.01
       0
       0
-      1.3025949539674775
+      1.0398307546763494
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10130,7 +10086,7 @@
       5.01
       0
       0
-      3.03428101587067
+      3.0733058702736438
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10144,7 +10100,7 @@
       5.01
       0
       0
-      2.644635372531352
+      2.34822847785733
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10158,7 +10114,7 @@
       5.01
       0
       0
-      1.663107875660627
+      0.6156840327182685
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10172,7 +10128,7 @@
       5.01
       0
       0
-      1.8572434499892556
+      0.9394226239118242
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10186,7 +10142,7 @@
       5.01
       0
       0
-      0.18261853471456846
+      2.474215084031574
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10200,7 +10156,7 @@
       5.01
       0
       0
-      3.0511385112457523
+      1.3719062207155415
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10214,15 +10170,15 @@
       5.01
       0
       0
-      0.35965079916095505
+      1.2557469276235194
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
     
 
     <include>
-      <name>suv_401</name>
+      <name>hatchback_blue_401</name>
       <pose>
       9.27
       -85.5
@@ -10231,7 +10187,7 @@
       0
       0
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback_blue</uri>
     </include>
 
     <include>
@@ -10343,7 +10299,7 @@
       </pose>
       <uri>model://postbox</uri>
     </include>
-
+<!--
     <include>
       <name>pine_tree_410</name>
       <pose>
@@ -10352,11 +10308,11 @@
       5.01
       0
       0
-      0.19083098246300495
+      1.007631001944328
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
     <include>
       <name>house_1_411</name>
       <pose>
@@ -10382,7 +10338,7 @@
       </pose>
       <uri>model://pickup</uri>
     </include>
-
+<!--
     <include>
       <name>oak_tree_413</name>
       <pose>
@@ -10434,7 +10390,7 @@
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
     <include>
       <name>cardboard_box_417</name>
       <pose>
@@ -10528,7 +10484,7 @@
       </pose>
       <uri>model://house_3</uri>
     </include>
-
+<!--
     <include>
       <name>pine_tree_424</name>
       <pose>
@@ -10537,7 +10493,7 @@
       5.01
       0
       0
-      1.6100355539374345
+      2.1836080911086513
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10550,7 +10506,7 @@
       5.01
       0
       0
-      0.563520486014092
+      1.6451545746936262
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10563,7 +10519,7 @@
       5.01
       0
       0
-      2.903481974448482
+      1.8067028306627428
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10576,7 +10532,7 @@
       5.01
       0
       0
-      0.009379393522358464
+      0.47183818801249244
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10589,7 +10545,7 @@
       5.01
       0
       0
-      2.6412667728651167
+      0.8515905597685731
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10602,7 +10558,7 @@
       5.01
       0
       0
-      1.4363006172461081
+      1.8774770668819474
       </pose>
       <uri>model://pine_tree</uri>
     </include>
@@ -10615,11 +10571,11 @@
       5.01
       0
       0
-      0.017951250236517974
+      0.7905035301866978
       </pose>
       <uri>model://pine_tree</uri>
     </include>
-
+-->
     <include>
       <name>fire_hydrant_431</name>
       <pose>
@@ -10664,145 +10620,6 @@
 
 
     
-      <include>
-      <name>pine_tree_434</name>
-      <pose>
-      -22.74665005978627
-      -52
-      5.01
-      0
-      0
-      0.3185032789108112
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_435</name>
-      <pose>
-      -22.720609212476937
-      -53
-      5.01
-      0
-      0
-      2.074897824615024
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_436</name>
-      <pose>
-      -23.63693299276896
-      -54
-      5.01
-      0
-      0
-      1.4505375048693736
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_437</name>
-      <pose>
-      -22.218684595461134
-      -55
-      5.01
-      0
-      0
-      2.4566852694914005
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_438</name>
-      <pose>
-      -22.876045460574485
-      -56
-      5.01
-      0
-      0
-      2.758831882201626
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_439</name>
-      <pose>
-      -22.379872573612545
-      -57
-      5.01
-      0
-      0
-      1.8639802002811248
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_440</name>
-      <pose>
-      -22.47616913880807
-      -58
-      5.01
-      0
-      0
-      1.4462953385379782
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_441</name>
-      <pose>
-      -23.236999228551664
-      -59
-      5.01
-      0
-      0
-      2.6480221392819274
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_442</name>
-      <pose>
-      -23.209287606382926
-      -60
-      5.01
-      0
-      0
-      0.2280368816123467
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
-    
-      <include>
-      <name>pine_tree_443</name>
-      <pose>
-      -23.238207097933607
-      -61
-      5.01
-      0
-      0
-      2.5577995558418536
-      </pose>
-      <uri>model://pine_tree</uri>
-    </include>
-
     
 
     <include>
@@ -10826,7 +10643,7 @@
       5.16
       0
       0
-      1.4704796629915533
+      2.870278212497464
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10840,7 +10657,7 @@
       5.16
       0
       0
-      2.3011548472447108
+      3.054937062172713
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10853,7 +10670,7 @@
       5.16
       0
       0
-      0.2438741506246911
+      2.3804977278647232
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10866,7 +10683,7 @@
       5.16
       0
       0
-      1.9330918450512837
+      0.9117844879796588
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10879,7 +10696,7 @@
       5.16
       0
       0
-      2.081900750265881
+      0.9519149311928309
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10892,7 +10709,7 @@
       5.16
       0
       0
-      0.8620369734484674
+      2.728519257722814
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10905,7 +10722,7 @@
       5.16
       0
       0
-      1.190605035567592
+      3.110855437817283
       </pose>
       <uri>model://construction_cone</uri>
     </include>
@@ -10914,12 +10731,12 @@
     <include>
       <name>cinder_block_452</name>
       <pose>
-      -38.70620606923184
-      -88.6079869741812
+      -36.42601880307613
+      -88.73173154329764
       5.16
       0
       0
-      0.79108748367994
+      2.17026783193664
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10927,12 +10744,12 @@
     <include>
       <name>cinder_block_453</name>
       <pose>
-      -37.85911618765132
-      -88.85313921043826
+      -38.61629562540261
+      -88.83916875458318
       5.16
       0
       0
-      1.2784808519551982
+      0.9758660883107019
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10940,12 +10757,12 @@
     <include>
       <name>cinder_block_454</name>
       <pose>
-      -39.7240315519533
-      -91.54554074246556
+      -37.576745617317535
+      -93.62625673450032
       5.16
       0
       0
-      0.3350836332981092
+      2.5616474659753075
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10953,12 +10770,12 @@
     <include>
       <name>cinder_block_455</name>
       <pose>
-      -36.91295309857769
-      -89.05625668094046
+      -36.01039041920959
+      -90.25438304766175
       5.16
       0
       0
-      1.7006730766636817
+      1.3594876883748235
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10966,12 +10783,12 @@
     <include>
       <name>cinder_block_456</name>
       <pose>
-      -37.69241029772989
-      -93.47929153296995
+      -35.79644590878738
+      -91.67670837154319
       5.16
       0
       0
-      1.1390052052240436
+      2.2022140338587737
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10979,12 +10796,12 @@
     <include>
       <name>cinder_block_457</name>
       <pose>
-      -37.145234046365715
-      -91.93363663973228
+      -38.989902513451874
+      -90.08660665815901
       5.16
       0
       0
-      1.1640034343839918
+      0.06888452264013348
       </pose>
       <uri>model://cinder_block</uri>
     </include>
@@ -10992,12 +10809,12 @@
     <include>
       <name>cinder_block_2_458</name>
       <pose>
-      -36.47405579938893
-      -93.5540614048563
+      -37.99964581046347
+      -93.18065587844565
       5.16
       0
       0
-      2.3934804922287447
+      2.373690396471485
       </pose>
       <uri>model://cinder_block_2</uri>
     </include>
@@ -11005,12 +10822,12 @@
     <include>
       <name>cinder_block_2_459</name>
       <pose>
-      -35.716740334644086
-      -91.69113007596765
+      -37.072765027767595
+      -90.37003637605777
       5.16
       0
       0
-      1.6274108219588421
+      1.730687254337946
       </pose>
       <uri>model://cinder_block_2</uri>
     </include>
@@ -11018,12 +10835,12 @@
     <include>
       <name>cinder_block_2_460</name>
       <pose>
-      -38.086539718451235
-      -90.7722977905263
+      -37.715667130496286
+      -93.7109665136357
       5.16
       0
       0
-      0.14174096635102287
+      1.7445566134670842
       </pose>
       <uri>model://cinder_block_2</uri>
     </include>
@@ -11031,12 +10848,12 @@
     <include>
       <name>cinder_block_2_461</name>
       <pose>
-      -36.35769879915562
-      -87.90567382483862
+      -36.933743251866986
+      -89.86964216025284
       5.16
       0
       0
-      0.3313281729276874
+      0.6011278846070364
       </pose>
       <uri>model://cinder_block_2</uri>
     </include>
@@ -11044,12 +10861,12 @@
     <include>
       <name>cinder_block_2_462</name>
       <pose>
-      -39.47143357085129
-      -87.67741466728421
+      -37.55518912936937
+      -88.14702473207478
       5.16
       0
       0
-      2.7829609608865695
+      0.33664603957402706
       </pose>
       <uri>model://cinder_block_2</uri>
     </include>
@@ -12848,56 +12665,56 @@
 
     
           <include>
-      <name>hatchback_blue_594</name>
+      <name>hatchback_594</name>
       <pose>
       -17.55
-      -87.25367858815623
+      -84.30815334714316
       5.01
       0
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback_blue</uri>
+      <uri>model://hatchback</uri>
     </include>
 
           <include>
-      <name>pickup_595</name>
+      <name>hatchback_red_595</name>
       <pose>
       -12.450000000000001
-      -58.96210116232734
+      -76.90941410465881
       5.01
       0
       0
       1.5707963267948966
       </pose>
-      <uri>model://pickup</uri>
+      <uri>model://hatchback_red</uri>
     </include>
 
     
           <include>
-      <name>pickup_596</name>
+      <name>hatchback_red_596</name>
       <pose>
       42.449999999999996
-      -82.55240636270662
-      5.01
-      0
-      0
-      -1.5707963267948966
-      </pose>
-      <uri>model://pickup</uri>
-    </include>
-
-          <include>
-      <name>hatchback_red_597</name>
-      <pose>
-      47.550000000000004
-      -73.11289574120495
+      -72.98660164699623
       5.01
       0
       0
       -1.5707963267948966
       </pose>
       <uri>model://hatchback_red</uri>
+    </include>
+
+          <include>
+      <name>pickup_597</name>
+      <pose>
+      47.550000000000004
+      -88.58571244483804
+      5.01
+      0
+      0
+      -1.5707963267948966
+      </pose>
+      <uri>model://pickup</uri>
     </include>
 
     
@@ -12905,7 +12722,7 @@
       <name>pickup_598</name>
       <pose>
       -17.55
-      -23.80322969161573
+      -35.850344924769296
       5.01
       0
       0
@@ -12915,78 +12732,24 @@
     </include>
 
           <include>
-      <name>hatchback_599</name>
+      <name>pickup_599</name>
       <pose>
       -12.450000000000001
-      -12.162607653163853
+      -13.762088529673171
       5.01
       0
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://pickup</uri>
     </include>
 
     
           <include>
-      <name>hatchback_blue_600</name>
+      <name>hatchback_red_600</name>
       <pose>
       42.449999999999996
-      -32.456710112505654
-      5.01
-      0
-      0
-      -1.5707963267948966
-      </pose>
-      <uri>model://hatchback_blue</uri>
-    </include>
-
-          <include>
-      <name>hatchback_601</name>
-      <pose>
-      47.550000000000004
-      -16.769921960453278
-      5.01
-      0
-      0
-      -1.5707963267948966
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
-    
-          <include>
-      <name>hatchback_602</name>
-      <pose>
-      -17.55
-      18.718064548308995
-      5.01
-      0
-      0
-      1.5707963267948966
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
-          <include>
-      <name>hatchback_603</name>
-      <pose>
-      -12.450000000000001
-      27.12548846818679
-      5.01
-      0
-      0
-      1.5707963267948966
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
-    
-          <include>
-      <name>hatchback_red_604</name>
-      <pose>
-      42.449999999999996
-      9.084987561596536
+      -30.251955317278806
       5.01
       0
       0
@@ -12996,10 +12759,10 @@
     </include>
 
           <include>
-      <name>pickup_605</name>
+      <name>pickup_601</name>
       <pose>
       47.550000000000004
-      18.809421145480773
+      -34.86364132078475
       5.01
       0
       0
@@ -13010,29 +12773,83 @@
 
     
           <include>
-      <name>suv_606</name>
+      <name>hatchback_602</name>
       <pose>
       -17.55
-      68.33860101474727
+      15.449777321036978
       5.01
       0
       0
       1.5707963267948966
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback</uri>
     </include>
 
           <include>
-      <name>suv_607</name>
+      <name>hatchback_red_603</name>
       <pose>
       -12.450000000000001
-      83.86754752664206
+      35.493543486655724
       5.01
       0
       0
       1.5707963267948966
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback_red</uri>
+    </include>
+
+    
+          <include>
+      <name>hatchback_blue_604</name>
+      <pose>
+      42.449999999999996
+      30.4802990891103
+      5.01
+      0
+      0
+      -1.5707963267948966
+      </pose>
+      <uri>model://hatchback_blue</uri>
+    </include>
+
+          <include>
+      <name>pickup_605</name>
+      <pose>
+      47.550000000000004
+      9.006685891863139
+      5.01
+      0
+      0
+      -1.5707963267948966
+      </pose>
+      <uri>model://pickup</uri>
+    </include>
+
+    
+          <include>
+      <name>hatchback_606</name>
+      <pose>
+      -17.55
+      74.56714590142099
+      5.01
+      0
+      0
+      1.5707963267948966
+      </pose>
+      <uri>model://hatchback</uri>
+    </include>
+
+          <include>
+      <name>hatchback_red_607</name>
+      <pose>
+      -12.450000000000001
+      64.11617020920019
+      5.01
+      0
+      0
+      1.5707963267948966
+      </pose>
+      <uri>model://hatchback_red</uri>
     </include>
 
     
@@ -13040,7 +12857,7 @@
       <name>pickup_608</name>
       <pose>
       42.449999999999996
-      79.94763804639418
+      82.17653808378716
       5.01
       0
       0
@@ -13053,7 +12870,7 @@
       <name>pickup_609</name>
       <pose>
       47.550000000000004
-      64.4760065684965
+      61.78827871275479
       5.01
       0
       0
@@ -13066,22 +12883,22 @@
 
     
           <include>
-      <name>hatchback_610</name>
+      <name>hatchback_red_610</name>
       <pose>
-      -22.48752186974827
+      -38.28359469394081
       -47.550000000000004
       5.01
       0
       0
       0
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://hatchback_red</uri>
     </include>
 
           <include>
       <name>suv_611</name>
       <pose>
-      -30.220950107273318
+      -30.995013566477972
       -42.449999999999996
       5.01
       0
@@ -13093,76 +12910,76 @@
 
     
           <include>
-      <name>hatchback_red_612</name>
+      <name>suv_612</name>
       <pose>
-      -36.10725805356468
+      -28.392418415377435
       42.449999999999996
       5.01
       0
       0
       3.141592653589793
       </pose>
-      <uri>model://hatchback_red</uri>
+      <uri>model://suv</uri>
     </include>
 
           <include>
-      <name>suv_613</name>
+      <name>hatchback_613</name>
       <pose>
-      -35.892904176616454
+      -35.70297278053215
       47.550000000000004
       5.01
       0
       0
       3.141592653589793
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback</uri>
     </include>
 
     
           <include>
-      <name>suv_614</name>
+      <name>hatchback_red_614</name>
       <pose>
-      10.409566380951102
+      13.550161277951418
       -47.550000000000004
       5.01
       0
       0
       0
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback_red</uri>
     </include>
 
           <include>
-      <name>hatchback_blue_615</name>
+      <name>hatchback_615</name>
       <pose>
-      4.417515357852199
+      3.9210049015486064
       -42.449999999999996
       5.01
       0
       0
       0
       </pose>
-      <uri>model://hatchback_blue</uri>
+      <uri>model://hatchback</uri>
     </include>
 
     
           <include>
-      <name>pickup_616</name>
+      <name>suv_616</name>
       <pose>
-      1.00783091613512
+      4.731505253206375
       42.449999999999996
       5.01
       0
       0
       3.141592653589793
       </pose>
-      <uri>model://pickup</uri>
+      <uri>model://suv</uri>
     </include>
 
           <include>
       <name>hatchback_blue_617</name>
       <pose>
-      17.247258564309405
+      32.52218043235088
       47.550000000000004
       5.01
       0
@@ -13174,10 +12991,23 @@
 
     
           <include>
-      <name>pickup_618</name>
+      <name>hatchback_618</name>
       <pose>
-      79.26547557517786
+      76.23657454655991
       -47.550000000000004
+      5.01
+      0
+      0
+      0
+      </pose>
+      <uri>model://hatchback</uri>
+    </include>
+
+          <include>
+      <name>pickup_619</name>
+      <pose>
+      77.74172946469213
+      -42.449999999999996
       5.01
       0
       0
@@ -13186,44 +13016,31 @@
       <uri>model://pickup</uri>
     </include>
 
-          <include>
-      <name>hatchback_619</name>
-      <pose>
-      90.99736464085785
-      -42.449999999999996
-      5.01
-      0
-      0
-      0
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
     
           <include>
-      <name>hatchback_red_620</name>
+      <name>suv_620</name>
       <pose>
-      96.06932637853674
+      71.59968161496802
       42.449999999999996
       5.01
       0
       0
       3.141592653589793
       </pose>
-      <uri>model://hatchback_red</uri>
+      <uri>model://suv</uri>
     </include>
 
           <include>
-      <name>hatchback_621</name>
+      <name>hatchback_blue_621</name>
       <pose>
-      58.4508814521825
+      85.00302163698595
       47.550000000000004
       5.01
       0
       0
       3.141592653589793
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://hatchback_blue</uri>
     </include>
 
     
@@ -13232,9 +13049,9 @@
     
       <actor name="walking_0">
         <!-- Starting pose -->
-        <pose>39.8 -50.2 5.76 0 0 3.141592653589793</pose>
+        <pose>50.2 -94.8 5.76 0 0 1.5707963267948966</pose>
         <skin>
-          <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+          <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
         <animation name="animation">
           <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
@@ -13247,27 +13064,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>39.8 -50.2 5.16 0 0 3.141592653589793</pose>
+                  <pose>50.2 -94.8 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>6.998969617005802</time>
-                  <pose>29.879999999999995 -50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>7.156125290625094</time>
+                  <pose>50.2 -85.88 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>7.698866578706382</time>
-                  <pose>29.879999999999995 -50.2 5.16 0 0 6.283185307179586</pose>
+                  <time>7.871737819687604</time>
+                  <pose>50.2 -85.88 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>13.997939234011604</time>
-                  <pose>39.8 -50.2 5.16 0 0 6.283185307179586</pose>
+                  <time>14.312250581250188</time>
+                  <pose>50.2 -94.8 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>14.697836195712185</time>
-                  <pose>39.8 -50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>15.027863110312698</time>
+                  <pose>50.2 -94.8 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
             </trajectory>
@@ -13276,7 +13093,7 @@
     
       <actor name="walking_1">
         <!-- Starting pose -->
-        <pose>50.2 -94.8 5.76 0 0 1.5707963267948966</pose>
+        <pose>-39.8 -94.8 5.76 0 0 0.0</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
         </skin>
@@ -13291,27 +13108,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>50.2 -94.8 5.16 0 0 1.5707963267948966</pose>
+                  <pose>-39.8 -94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>6.990150401005168</time>
-                  <pose>50.2 -85.88 5.16 0 0 1.5707963267948966</pose>
+                  <time>2.493822017693065</time>
+                  <pose>-35.879999999999995 -94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>7.689165441105685</time>
-                  <pose>50.2 -85.88 5.16 0 0 4.71238898038469</pose>
+                  <time>2.743204219462372</time>
+                  <pose>-35.879999999999995 -94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>13.980300802010335</time>
-                  <pose>50.2 -94.8 5.16 0 0 4.71238898038469</pose>
+                  <time>4.98764403538613</time>
+                  <pose>-39.8 -94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>14.679315842110853</time>
-                  <pose>50.2 -94.8 5.16 0 0 1.5707963267948966</pose>
+                  <time>5.237026237155437</time>
+                  <pose>-39.8 -94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
             </trajectory>
@@ -13320,9 +13137,9 @@
     
       <actor name="walking_2">
         <!-- Starting pose -->
-        <pose>-20.2 94.8 5.76 0 0 3.141592653589793</pose>
+        <pose>50.2 50.2 5.76 0 0 0.0</pose>
         <skin>
-          <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+          <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
         <animation name="animation">
           <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
@@ -13335,27 +13152,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-20.2 94.8 5.16 0 0 3.141592653589793</pose>
+                  <pose>50.2 50.2 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>3.917472390911467</time>
-                  <pose>-24.119999999999997 94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>11.735578102764528</time>
+                  <pose>61.120000000000005 50.2 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>4.309219630002614</time>
-                  <pose>-24.119999999999997 94.8 5.16 0 0 6.283185307179586</pose>
+                  <time>12.909135913040982</time>
+                  <pose>61.120000000000005 50.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>7.834944781822934</time>
-                  <pose>-20.2 94.8 5.16 0 0 6.283185307179586</pose>
+                  <time>23.471156205529056</time>
+                  <pose>50.2 50.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>8.226692020914081</time>
-                  <pose>-20.2 94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>24.64471401580551</time>
+                  <pose>50.2 50.2 5.16 0 0 0.0</pose>
                 </waypoint>
               
             </trajectory>
@@ -13364,51 +13181,7 @@
     
       <actor name="walking_3">
         <!-- Starting pose -->
-        <pose>-39.8 -39.8 5.76 0 0 0.0</pose>
-        <skin>
-          <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
-        </skin>
-        <animation name="animation">
-          <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
-          
-            <interpolate_x>true</interpolate_x>
-          
-        </animation>
-          <script>
-            <trajectory id="0" type="animation">
-              
-                <waypoint>
-                  <time>0</time>
-                  <pose>-39.8 -39.8 5.16 0 0 0.0</pose>
-                </waypoint>
-              
-                <waypoint>
-                  <time>3.4570403743021125</time>
-                  <pose>-35.879999999999995 -39.8 5.16 0 0 0.0</pose>
-                </waypoint>
-              
-                <waypoint>
-                  <time>3.802744411732324</time>
-                  <pose>-35.879999999999995 -39.8 5.16 0 0 3.141592653589793</pose>
-                </waypoint>
-              
-                <waypoint>
-                  <time>6.914080748604225</time>
-                  <pose>-39.8 -39.8 5.16 0 0 3.141592653589793</pose>
-                </waypoint>
-              
-                <waypoint>
-                  <time>7.259784786034436</time>
-                  <pose>-39.8 -39.8 5.16 0 0 0.0</pose>
-                </waypoint>
-              
-            </trajectory>
-          </script>
-      </actor>
-    
-      <actor name="walking_4">
-        <!-- Starting pose -->
-        <pose>-9.8 -94.8 5.76 0 0 0.0</pose>
+        <pose>39.8 5.2 5.76 0 0 3.141592653589793</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
@@ -13423,38 +13196,38 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-9.8 -94.8 5.16 0 0 0.0</pose>
+                  <pose>39.8 5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>9.76614557687598</time>
-                  <pose>0.11999999999999922 -94.8 5.16 0 0 0.0</pose>
+                  <time>7.718449815327957</time>
+                  <pose>29.879999999999995 5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>10.742760134563579</time>
-                  <pose>0.11999999999999922 -94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>8.490294796860754</time>
+                  <pose>29.879999999999995 5.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>19.53229115375196</time>
-                  <pose>-9.8 -94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>15.436899630655914</time>
+                  <pose>39.8 5.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>20.508905711439557</time>
-                  <pose>-9.8 -94.8 5.16 0 0 0.0</pose>
+                  <time>16.20874461218871</time>
+                  <pose>39.8 5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
             </trajectory>
           </script>
       </actor>
     
-      <actor name="walking_5">
+      <actor name="walking_4">
         <!-- Starting pose -->
-        <pose>-9.8 50.2 5.76 0 0 0.0</pose>
+        <pose>-9.8 -5.2 5.76 0 0 0.0</pose>
         <skin>
-          <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+          <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
         <animation name="animation">
           <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
@@ -13467,27 +13240,71 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-9.8 50.2 5.16 0 0 0.0</pose>
+                  <pose>-9.8 -5.2 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>10.20683634563959</time>
-                  <pose>0.11999999999999922 50.2 5.16 0 0 0.0</pose>
+                  <time>10.97478375180286</time>
+                  <pose>0.11999999999999922 -5.2 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>11.227519980203551</time>
-                  <pose>0.11999999999999922 50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>12.072262126983148</time>
+                  <pose>0.11999999999999922 -5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>20.41367269127918</time>
-                  <pose>-9.8 50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>21.94956750360572</time>
+                  <pose>-9.8 -5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>21.43435632584314</time>
-                  <pose>-9.8 50.2 5.16 0 0 0.0</pose>
+                  <time>23.047045878786008</time>
+                  <pose>-9.8 -5.2 5.16 0 0 0.0</pose>
+                </waypoint>
+              
+            </trajectory>
+          </script>
+      </actor>
+    
+      <actor name="walking_5">
+        <!-- Starting pose -->
+        <pose>-9.8 -94.8 5.76 0 0 0.0</pose>
+        <skin>
+          <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+        </skin>
+        <animation name="animation">
+          <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+          
+            <interpolate_x>true</interpolate_x>
+          
+        </animation>
+          <script>
+            <trajectory id="0" type="animation">
+              
+                <waypoint>
+                  <time>0</time>
+                  <pose>-9.8 -94.8 5.16 0 0 0.0</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>7.374229443316946</time>
+                  <pose>0.11999999999999922 -94.8 5.16 0 0 0.0</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>8.111652387648641</time>
+                  <pose>0.11999999999999922 -94.8 5.16 0 0 3.141592653589793</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>14.748458886633893</time>
+                  <pose>-9.8 -94.8 5.16 0 0 3.141592653589793</pose>
+                </waypoint>
+              
+                <waypoint>
+                  <time>15.485881830965589</time>
+                  <pose>-9.8 -94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
             </trajectory>
@@ -13496,7 +13313,7 @@
     
       <actor name="running_0">
         <!-- Starting pose -->
-        <pose>-9.8 50.2 5.76 0 0 1.5707963267948966</pose>
+        <pose>-39.8 94.8 5.76 0 0 0.0</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
         </skin>
@@ -13511,27 +13328,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-9.8 50.2 5.16 0 0 1.5707963267948966</pose>
+                  <pose>-39.8 94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.191994495052952</time>
-                  <pose>-9.8 59.120000000000005 5.16 0 0 1.5707963267948966</pose>
+                  <time>0.9445050476882847</time>
+                  <pose>-35.879999999999995 94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.4111939445582475</time>
-                  <pose>-9.8 59.120000000000005 5.16 0 0 4.71238898038469</pose>
+                  <time>1.0389555524571132</time>
+                  <pose>-35.879999999999995 94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>4.383988990105904</time>
-                  <pose>-9.8 50.2 5.16 0 0 4.71238898038469</pose>
+                  <time>1.8890100953765694</time>
+                  <pose>-39.8 94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>4.6031884396112</time>
-                  <pose>-9.8 50.2 5.16 0 0 1.5707963267948966</pose>
+                  <time>1.983460600145398</time>
+                  <pose>-39.8 94.8 5.16 0 0 0.0</pose>
                 </waypoint>
               
             </trajectory>
@@ -13540,7 +13357,7 @@
     
       <actor name="running_1">
         <!-- Starting pose -->
-        <pose>104.8 -39.8 5.76 0 0 3.141592653589793</pose>
+        <pose>39.8 -5.2 5.76 0 0 3.141592653589793</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
         </skin>
@@ -13555,27 +13372,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>104.8 -39.8 5.16 0 0 3.141592653589793</pose>
+                  <pose>39.8 -5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.464915051755684</time>
-                  <pose>93.88 -39.8 5.16 0 0 3.141592653589793</pose>
+                  <time>2.763202130450083</time>
+                  <pose>29.879999999999995 -5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.711406556931253</time>
-                  <pose>93.88 -39.8 5.16 0 0 6.283185307179586</pose>
+                  <time>3.0395223434950913</time>
+                  <pose>29.879999999999995 -5.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>4.929830103511368</time>
-                  <pose>104.8 -39.8 5.16 0 0 6.283185307179586</pose>
+                  <time>5.526404260900166</time>
+                  <pose>39.8 -5.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>5.176321608686937</time>
-                  <pose>104.8 -39.8 5.16 0 0 3.141592653589793</pose>
+                  <time>5.802724473945174</time>
+                  <pose>39.8 -5.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
             </trajectory>
@@ -13584,7 +13401,7 @@
     
       <actor name="running_2">
         <!-- Starting pose -->
-        <pose>-20.2 50.2 5.76 0 0 3.141592653589793</pose>
+        <pose>-39.8 5.2 5.76 0 0 1.5707963267948966</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
@@ -13599,27 +13416,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-20.2 50.2 5.16 0 0 3.141592653589793</pose>
+                  <pose>-39.8 5.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>0.8798165431088186</time>
-                  <pose>-24.119999999999997 50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>1.9229831381590865</time>
+                  <pose>-39.8 12.12 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>0.9677981974197005</time>
-                  <pose>-24.119999999999997 50.2 5.16 0 0 6.283185307179586</pose>
+                  <time>2.115281451974995</time>
+                  <pose>-39.8 12.12 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>1.7596330862176373</time>
-                  <pose>-20.2 50.2 5.16 0 0 6.283185307179586</pose>
+                  <time>3.845966276318173</time>
+                  <pose>-39.8 5.2 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>1.8476147405285193</time>
-                  <pose>-20.2 50.2 5.16 0 0 3.141592653589793</pose>
+                  <time>4.038264590134082</time>
+                  <pose>-39.8 5.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
             </trajectory>
@@ -13628,7 +13445,7 @@
     
       <actor name="running_3">
         <!-- Starting pose -->
-        <pose>-39.8 -94.8 5.76 0 0 0.0</pose>
+        <pose>50.2 5.2 5.76 0 0 1.5707963267948966</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
         </skin>
@@ -13643,27 +13460,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-39.8 -94.8 5.16 0 0 0.0</pose>
+                  <pose>50.2 5.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>1.0503669349014204</time>
-                  <pose>-35.879999999999995 -94.8 5.16 0 0 0.0</pose>
+                  <time>1.6752367094281702</time>
+                  <pose>50.2 12.12 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>1.1554036283915625</time>
-                  <pose>-35.879999999999995 -94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>1.8427603803709873</time>
+                  <pose>50.2 12.12 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.100733869802841</time>
-                  <pose>-39.8 -94.8 5.16 0 0 3.141592653589793</pose>
+                  <time>3.3504734188563403</time>
+                  <pose>50.2 5.2 5.16 0 0 4.71238898038469</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.205770563292983</time>
-                  <pose>-39.8 -94.8 5.16 0 0 0.0</pose>
+                  <time>3.5179970897991573</time>
+                  <pose>50.2 5.2 5.16 0 0 1.5707963267948966</pose>
                 </waypoint>
               
             </trajectory>
@@ -13672,7 +13489,7 @@
     
       <actor name="running_4">
         <!-- Starting pose -->
-        <pose>50.2 -39.8 5.76 0 0 1.5707963267948966</pose>
+        <pose>39.8 50.2 5.76 0 0 3.141592653589793</pose>
         <skin>
           <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
         </skin>
@@ -13687,27 +13504,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>50.2 -39.8 5.16 0 0 1.5707963267948966</pose>
+                  <pose>39.8 50.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>1.8583526950994194</time>
-                  <pose>50.2 -32.879999999999995 5.16 0 0 1.5707963267948966</pose>
+                  <time>2.675289442395306</time>
+                  <pose>29.879999999999995 50.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.0441879646093613</time>
-                  <pose>50.2 -32.879999999999995 5.16 0 0 4.71238898038469</pose>
+                  <time>2.942818386634837</time>
+                  <pose>29.879999999999995 50.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>3.7167053901988387</time>
-                  <pose>50.2 -39.8 5.16 0 0 4.71238898038469</pose>
+                  <time>5.350578884790612</time>
+                  <pose>39.8 50.2 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>3.9025406597087806</time>
-                  <pose>50.2 -39.8 5.16 0 0 1.5707963267948966</pose>
+                  <time>5.6181078290301425</time>
+                  <pose>39.8 50.2 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
             </trajectory>
@@ -13716,9 +13533,9 @@
     
       <actor name="running_5">
         <!-- Starting pose -->
-        <pose>-39.8 -94.8 5.76 0 0 1.5707963267948966</pose>
+        <pose>104.8 94.8 5.76 0 0 3.141592653589793</pose>
         <skin>
-          <filename>model://actor/meshes/SKIN_man_red_shirt.dae</filename>
+          <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
         </skin>
         <animation name="animation">
           <filename>model://actor/meshes/ANIMATION_running.dae</filename>
@@ -13731,27 +13548,27 @@
               
                 <waypoint>
                   <time>0</time>
-                  <pose>-39.8 -94.8 5.16 0 0 1.5707963267948966</pose>
+                  <pose>104.8 94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.382491790860686</time>
-                  <pose>-39.8 -85.88 5.16 0 0 1.5707963267948966</pose>
+                  <time>3.0149689940270394</time>
+                  <pose>93.88 94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>2.620740969946755</time>
-                  <pose>-39.8 -85.88 5.16 0 0 4.71238898038469</pose>
+                  <time>3.3164658934297435</time>
+                  <pose>93.88 94.8 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>4.764983581721372</time>
-                  <pose>-39.8 -94.8 5.16 0 0 4.71238898038469</pose>
+                  <time>6.029937988054079</time>
+                  <pose>104.8 94.8 5.16 0 0 6.283185307179586</pose>
                 </waypoint>
               
                 <waypoint>
-                  <time>5.003232760807442</time>
-                  <pose>-39.8 -94.8 5.16 0 0 1.5707963267948966</pose>
+                  <time>6.331434887456783</time>
+                  <pose>104.8 94.8 5.16 0 0 3.141592653589793</pose>
                 </waypoint>
               
             </trajectory>
@@ -13818,7 +13635,7 @@
       <actor name="car_622">
         <pose>-43.15 -90 5.01 0 0 0</pose>
         <include>
-      <name>hatchback_blue_623</name>
+      <name>hatchback_red_623</name>
       <pose>
       0
       0
@@ -13827,7 +13644,7 @@
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback_blue</uri>
+      <uri>model://hatchback_red</uri>
     </include>
 
         <script>
@@ -13839,7 +13656,7 @@
               </waypoint>
             
               <waypoint>
-                <time>28</time>
+                <time>20</time>
                 <pose>-43.15 100 5.01 0 0 0</pose>
               </waypoint>
             
@@ -13850,7 +13667,7 @@
       <actor name="car_624">
         <pose>-46.85 100 5.01 0 0 3.141592653589793</pose>
         <include>
-      <name>hatchback_625</name>
+      <name>pickup_625</name>
       <pose>
       0
       0
@@ -13859,7 +13676,7 @@
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://pickup</uri>
     </include>
 
         <script>
@@ -13871,7 +13688,7 @@
               </waypoint>
             
               <waypoint>
-                <time>37</time>
+                <time>43</time>
                 <pose>-46.85 -90 5.01 0 0 3.141592653589793</pose>
               </waypoint>
             
@@ -13882,7 +13699,7 @@
       <actor name="car_626">
         <pose>-15 -100 5.01 0 0 0</pose>
         <include>
-      <name>hatchback_627</name>
+      <name>pickup_627</name>
       <pose>
       0
       0
@@ -13891,7 +13708,7 @@
       0
       1.5707963267948966
       </pose>
-      <uri>model://hatchback</uri>
+      <uri>model://pickup</uri>
     </include>
 
         <script>
@@ -13903,7 +13720,7 @@
               </waypoint>
             
               <waypoint>
-                <time>24</time>
+                <time>23</time>
                 <pose>-15 100 5.01 0 0 0</pose>
               </waypoint>
             
@@ -13914,7 +13731,7 @@
       <actor name="car_628">
         <pose>45 100 5.01 0 0 3.141592653589793</pose>
         <include>
-      <name>suv_629</name>
+      <name>hatchback_629</name>
       <pose>
       0
       0
@@ -13923,7 +13740,7 @@
       0
       1.5707963267948966
       </pose>
-      <uri>model://suv</uri>
+      <uri>model://hatchback</uri>
     </include>
 
         <script>
@@ -13935,7 +13752,7 @@
               </waypoint>
             
               <waypoint>
-                <time>39</time>
+                <time>29</time>
                 <pose>45 -100 5.01 0 0 3.141592653589793</pose>
               </waypoint>
             
@@ -13946,103 +13763,7 @@
       <actor name="car_630">
         <pose>108.15 100 5.01 0 0 3.141592653589793</pose>
         <include>
-      <name>hatchback_631</name>
-      <pose>
-      0
-      0
-      0.0
-      0
-      0
-      1.5707963267948966
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
-        <script>
-          <trajectory id="0" type="animation">
-            
-              <waypoint>
-                <time>0</time>
-                <pose>108.15 100 5.01 0 0 3.141592653589793</pose>
-              </waypoint>
-            
-              <waypoint>
-                <time>43</time>
-                <pose>108.15 -100 5.01 0 0 3.141592653589793</pose>
-              </waypoint>
-            
-          </trajectory>
-        </script>
-      </actor>
-    
-      <actor name="car_632">
-        <pose>111.85 100 5.01 0 0 3.141592653589793</pose>
-        <include>
-      <name>hatchback_blue_633</name>
-      <pose>
-      0
-      0
-      0.0
-      0
-      0
-      1.5707963267948966
-      </pose>
-      <uri>model://hatchback_blue</uri>
-    </include>
-
-        <script>
-          <trajectory id="0" type="animation">
-            
-              <waypoint>
-                <time>0</time>
-                <pose>111.85 100 5.01 0 0 3.141592653589793</pose>
-              </waypoint>
-            
-              <waypoint>
-                <time>36</time>
-                <pose>111.85 -100 5.01 0 0 3.141592653589793</pose>
-              </waypoint>
-            
-          </trajectory>
-        </script>
-      </actor>
-    
-      <actor name="car_634">
-        <pose>118.15 -100 5.01 0 0 0</pose>
-        <include>
-      <name>hatchback_635</name>
-      <pose>
-      0
-      0
-      0.0
-      0
-      0
-      1.5707963267948966
-      </pose>
-      <uri>model://hatchback</uri>
-    </include>
-
-        <script>
-          <trajectory id="0" type="animation">
-            
-              <waypoint>
-                <time>0</time>
-                <pose>118.15 -100 5.01 0 0 0</pose>
-              </waypoint>
-            
-              <waypoint>
-                <time>37</time>
-                <pose>118.15 100 5.01 0 0 0</pose>
-              </waypoint>
-            
-          </trajectory>
-        </script>
-      </actor>
-    
-      <actor name="car_636">
-        <pose>121.85 -100 5.01 0 0 0</pose>
-        <include>
-      <name>suv_637</name>
+      <name>suv_631</name>
       <pose>
       0
       0
@@ -14059,11 +13780,107 @@
             
               <waypoint>
                 <time>0</time>
+                <pose>108.15 100 5.01 0 0 3.141592653589793</pose>
+              </waypoint>
+            
+              <waypoint>
+                <time>39</time>
+                <pose>108.15 -100 5.01 0 0 3.141592653589793</pose>
+              </waypoint>
+            
+          </trajectory>
+        </script>
+      </actor>
+    
+      <actor name="car_632">
+        <pose>111.85 100 5.01 0 0 3.141592653589793</pose>
+        <include>
+      <name>hatchback_633</name>
+      <pose>
+      0
+      0
+      0.0
+      0
+      0
+      1.5707963267948966
+      </pose>
+      <uri>model://hatchback</uri>
+    </include>
+
+        <script>
+          <trajectory id="0" type="animation">
+            
+              <waypoint>
+                <time>0</time>
+                <pose>111.85 100 5.01 0 0 3.141592653589793</pose>
+              </waypoint>
+            
+              <waypoint>
+                <time>23</time>
+                <pose>111.85 -100 5.01 0 0 3.141592653589793</pose>
+              </waypoint>
+            
+          </trajectory>
+        </script>
+      </actor>
+    
+      <actor name="car_634">
+        <pose>118.15 -100 5.01 0 0 0</pose>
+        <include>
+      <name>pickup_635</name>
+      <pose>
+      0
+      0
+      0.0
+      0
+      0
+      1.5707963267948966
+      </pose>
+      <uri>model://pickup</uri>
+    </include>
+
+        <script>
+          <trajectory id="0" type="animation">
+            
+              <waypoint>
+                <time>0</time>
+                <pose>118.15 -100 5.01 0 0 0</pose>
+              </waypoint>
+            
+              <waypoint>
+                <time>36</time>
+                <pose>118.15 100 5.01 0 0 0</pose>
+              </waypoint>
+            
+          </trajectory>
+        </script>
+      </actor>
+    
+      <actor name="car_636">
+        <pose>121.85 -100 5.01 0 0 0</pose>
+        <include>
+      <name>pickup_637</name>
+      <pose>
+      0
+      0
+      0.0
+      0
+      0
+      1.5707963267948966
+      </pose>
+      <uri>model://pickup</uri>
+    </include>
+
+        <script>
+          <trajectory id="0" type="animation">
+            
+              <waypoint>
+                <time>0</time>
                 <pose>121.85 -100 5.01 0 0 0</pose>
               </waypoint>
             
               <waypoint>
-                <time>26</time>
+                <time>41</time>
                 <pose>121.85 100 5.01 0 0 0</pose>
               </waypoint>
             
@@ -14074,7 +13891,7 @@
 
     <!-- Prius -->
 
-    <include>
+    <!--include>
       <name>prius_hybrid_123</name>
       <pose> -40 -1.9 5.01 0 0 1.57 </pose>
 
@@ -14107,7 +13924,7 @@
         <frwheel_steering_d_gain>3e2</frwheel_steering_d_gain>
       </plugin>
 
-    </include>
+    </include-->
 
   </world>
 </sdf>

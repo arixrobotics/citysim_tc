@@ -14,11 +14,11 @@ msg = """
 Reading from the keyboard and Publishing to Prius Control!
 ---------------------------
 Moving around:
-   u    i    o
-        k    
-   m    ,    .
 
-anything else : neutral gear
+forward:   u    i    o
+breaking:       k
+reverse:   m    ,    .
+
 
 q/z : increase/decrease throttle & steering by 10%
 w/x : increase/decrease only throttle by 10%

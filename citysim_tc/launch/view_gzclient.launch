@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="citysim_tc" type="view_gzclient.sh" name="citysim_gzclient_launcher"/>
+
+</launch>
