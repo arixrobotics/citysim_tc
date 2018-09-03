@@ -21,9 +21,9 @@ To change traffic lights, in Terminal 5:
 $ rostopic pub -1 /gazebo/keypress 'data:"q"'    
 Change the value of data depending on which trafficlights:    
 Intersection 1: q/a    
-Intersection 1: w/s    
-Intersection 1: e/d    
-Intersection 1: r/f    
+Intersection 2: w/s    
+Intersection 3: e/d    
+Intersection 4: r/f    
 
 
 To run m-city simulation (racing circuit) instead;   
