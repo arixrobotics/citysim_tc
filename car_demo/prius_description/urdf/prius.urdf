@@ -285,7 +285,7 @@
   <joint name="front_left_laser_joint" type="fixed">
     <parent link="chassis"/>
     <child link="front_left_laser_link"/>
-    <origin xyz="1 -2.3 0.5" rpy="0 0.05 0"/>
+    <origin xyz="1 -2.3 0.5" rpy="0 0.0 0"/>
   </joint>
 
   <link name="front_right_laser_link">
@@ -297,7 +297,7 @@
   <joint name="front_right_laser_joint" type="fixed">
     <parent link="chassis"/>
     <child link="front_right_laser_link"/>
-    <origin xyz="-1 -2.3 0.5" rpy="0 0.05 3.14"/>
+    <origin xyz="-1 -2.3 0.5" rpy="0 0.0 3.14"/>
   </joint>
 
   <gazebo reference="base_link_connection">
@@ -509,13 +509,13 @@
           </horizontal>
           <vertical>
             <samples>16</samples>
-            <min_angle>-0.1</min_angle>
+            <min_angle>0.0</min_angle>   <!--let it see further in front-->
             <max_angle>-0.35</max_angle>
           </vertical>
         </scan>
         <range>
           <min>0.2</min>
-          <max>30</max>
+          <max>50</max>
           <resolution>0.01</resolution>
         </range>
       </ray>
