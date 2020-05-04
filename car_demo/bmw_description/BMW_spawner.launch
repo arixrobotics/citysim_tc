@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="model" default="$(find bmw_description)/urdf/bmw.urdf"/>
+  <!-- <arg name="rvizconfig" default="$(find my_bmw_spawn)/rviz/bmw_config.rviz" /> -->
+
+  <param name="robot_description" textfile="$(arg model)"/>
+<!-- 
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find my_bmw_spawn)/worlds/test.world"/>
+      
+      <arg name="verbose" value="true"/>
+      <arg name="debug" value="false" />
+      <arg name="gui" value="true" />
+      <arg name="paused" value="false"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="headless" value="false"/>
+
+  </include>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+ -->  
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x -2 -y 0.0 -z 0.0 -R 0.1 -P 0.0 -Y 0.2 -model bmw"/>
+
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
+
+  <!-- we dont need this one  -->
+  <!-- <node pkg="car_demo" type="joystick_translator" name="joy_translator"/> -->
+  
+  <!-- i commented this out so that we can easily kill and rerun it while tuning the parameters -->
+  <!-- it is required so must be rosrun seperately -->
+  <!-- <node name="cmd_vel_translator" pkg="my_bmw_spawn" type="cmd_vel_odom_translator.py" args="" required="true" /> -->
+  
+  <!-- this is the code that provides odometry of the car -->
+  <!-- <node name="odom_tf_pub" pkg="my_bmw_spawn" type="odom_tf_pub3.py"/> -->
+
+  <!-- I'm putting the laser scan launch files here instead of in mapping launcher -->
+<!--   <include file="$(find point_cloud_converter)/launch/center_laser_prius_pc1_to_pc2_converter.launch" />
+  <include file="$(find point_cloud_to_laserscan)/launch/bmw_center_pc_to_laserscan_conversion.launch" />
+ -->
+
+</launch>
