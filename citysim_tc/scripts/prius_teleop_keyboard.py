@@ -63,6 +63,8 @@ if __name__=="__main__":
         while(1):
             #command = Control()
             key = getKey()
+            print ("--")
+            print (key)
             # if key == 'i': throttle +, steering 0, gear FORWARD, braking 0
             if key == 'i':
                 command.throttle = speed 
@@ -124,7 +126,7 @@ if __name__=="__main__":
                     break
 
             pub.publish(command)
-
+            print(command)
 
     except Exception as e:
         print(e)
